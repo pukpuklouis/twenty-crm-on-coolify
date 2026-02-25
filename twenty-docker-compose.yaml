@@ -120,7 +120,7 @@ services:
         - 'pgrep -f "worker:prod" > /dev/null || exit 1'
       interval: 10s
       timeout: 10s
-      retries: 5
+      retries: 10
       start_period: 30s
     restart: always
   db:
