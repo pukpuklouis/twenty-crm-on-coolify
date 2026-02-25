@@ -117,7 +117,7 @@ services:
     healthcheck:
       test:
         - CMD-SHELL
-        - 'pgrep -f "worker:prod" > /dev/null && redis-cli -h redis ping > /dev/null || exit 1'
+        - 'pgrep -f "worker:prod" > /dev/null || exit 1'
       interval: 10s
       timeout: 10s
       retries: 5
