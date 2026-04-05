@@ -10,7 +10,7 @@ services:
       - SERVICE_FQDN_SERVER_3000
       - NODE_PORT=3000
       - 'PG_DATABASE_URL=postgres://${PG_DATABASE_USER:-postgres}:${PG_DATABASE_PASSWORD:-postgres}@db:5432/default'
-      - 'SERVER_URL=${SERVICE_URL_SERVER}'
+      - 'SERVER_URL=${SERVICE_URL_SERVER:-https://twenty.anlstudio.cc}'
       - 'REDIS_URL=redis://redis:6379'
       - 'DISABLE_DB_MIGRATIONS=${DISABLE_DB_MIGRATIONS:-false}'
       - 'DISABLE_CRON_JOBS_REGISTRATION=${DISABLE_CRON_JOBS_REGISTRATION:-false}'
