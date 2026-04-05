@@ -11,6 +11,8 @@ services:
       - NODE_PORT=3000
       - 'PG_DATABASE_URL=postgres://${PG_DATABASE_USER:-postgres}:${PG_DATABASE_PASSWORD:-postgres}@db:5432/default'
       - 'SERVER_URL=https://twenty.anlstudio.cc'
+      - 'FRONTEND_URL=https://twenty.anlstudio.cc'
+      - 'TRUST_PROXY=true'
       - 'REDIS_URL=redis://redis:6379'
       - 'DISABLE_DB_MIGRATIONS=${DISABLE_DB_MIGRATIONS:-false}'
       - 'DISABLE_CRON_JOBS_REGISTRATION=${DISABLE_CRON_JOBS_REGISTRATION:-false}'
